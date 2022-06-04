@@ -21,7 +21,7 @@ lilac = pygame.Color(158, 156, 230)
 
 # initialising game window
 pygame.display.set_caption('Python Snake Game')
-game_window = pygame.display.set_mode((window_x, window_y), pygame.FULLSCREEN)
+game_window = pygame.display.set_mode((window_x, window_y))
 
 # FPS controller
 fps = pygame.time.Clock()
@@ -58,7 +58,7 @@ def show_score(color, font, size):
     # create rectangular object for
     # text surface object
     score_rect = score_surface.get_rect()
-    speed_rect = speed_surface.get_rect(topleft=(window_x-100, 0))
+    speed_rect = speed_surface.get_rect(topleft=(window_x-130, 0))
 
     # displaying text
     game_window.blit(score_surface, score_rect)
